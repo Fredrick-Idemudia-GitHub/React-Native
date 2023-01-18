@@ -1,25 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import PhoneDialerGridDesgn from "./PhoneDialerGridDesgn";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Text>Added second text 2</Text>
-      <Text>Third line</Text>
-
-
-
-      <StatusBar style="auto" />
-    </View>
+    <PhoneDialerGridDesgn />
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'hotpink',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
