@@ -1,10 +1,14 @@
 import React from "react";
-import { StyleSheet,Text,View } from "react-native";
-import { AntDesign,Feather,EvilIcons,Ionicons } from '@expo/vector-icons';
+import { StyleSheet,Text,View,useWindowDimensions } from "react-native";
+import { AntDesign,Feather,EvilIcons,Ionicons,Entypo } from '@expo/vector-icons';
+// React Native Expo Icon Website https://icons.expo.fyi/
 
 
 
 export default function PhoneDialerGridDesgn(){
+    const {height, width} = useWindowDimensions();
+    const top = (80/100)*{height};
+    const left = (50/100)*{width}
     return(
         <View style={styles.container}>
             <View style={styles.navBar}>
@@ -61,7 +65,6 @@ export default function PhoneDialerGridDesgn(){
                             <Text><Ionicons name="person-outline" size={40} color="white" /></Text>
                         </View>
                     </View>
-                        {/* here */}
                     <View style={styles.row2column2}> 
                         <View style={styles.row2more2}>
                             <Text><Feather name="more-vertical" size={30} color="white" /></Text>
@@ -101,11 +104,16 @@ export default function PhoneDialerGridDesgn(){
                     <View style={styles.row4column2}>
                         <View style={styles.row4more2}>
                             <Text><Feather name="more-vertical" size={30} color="white" /></Text>
+                            <Text style={styles.copyRightText}>Phone Contact Grid Designed with React Native</Text>
                         </View>
                         <View style={styles.row4contact2}>
                             <Text><Ionicons name="person-outline" size={40} color="white" /></Text>
+                            <Text style={styles.copyRightText}>Copy Right - Fredrick Idemudia</Text>
                         </View>
                     </View>
+                </View>
+                <View style={styles.keyPad}>
+                    <Text><Entypo name="dial-pad" size={20} color="white" /></Text>
                 </View>
         </View>
     )
@@ -122,7 +130,8 @@ const styles = StyleSheet.create({
         backgroundColor: "#05B2E5",
         justifyContent: "center",
         alignItems: "center",
-        flexDirection: "column"
+        flexDirection: "column",
+        
     },
     searchBar: {
         flex:0.5,
@@ -348,7 +357,8 @@ const styles = StyleSheet.create({
         flex: 0.6,
         backgroundColor:"#A9CB3D",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+
     },
     row4column2: {
         flex: 0.5,
@@ -369,5 +379,20 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center"
     },
+    keyPad: {
+        width: 50,
+        height: 50,
+        backgroundColor: "#05B2E5",
+        position: "absolute",
+        top: 550,
+        left: 656,
+        // zIndex: 1,
+        borderRadius:"50%",
+        justifyContent:"center",
+        alignItems:"center"
+    },
+    copyRightText: {
+        color: "#F3F4F7",
+    }
 
 })

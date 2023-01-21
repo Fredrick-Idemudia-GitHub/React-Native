@@ -1,4 +1,4 @@
-import PhoneDialerGridDesgn from "./PhoneDialerGridDesgn";
+import PhoneDialerGridDesgn from "./PhoneDialerGridDesign/PhoneDialerGridDesgn";
 
 export default function App() {
   return (
